@@ -28,6 +28,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 }
 
 // Bar Chart Example
+var ctx = document.getElementById("barraAtributos");
 var jugador = document.getElementById("helper").getAttribute("data-name");
 
 var myBarChart = new Chart(ctx, {
