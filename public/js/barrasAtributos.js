@@ -41,7 +41,7 @@ var myBarChart = new Chart(ctx, {
   data: {
     labels: ["Pensamiento Sistémico", "Orientación al Logro", "Amplitud Perceptual", "Inteligencia Social", "Innovación y Creatividad"],
     datasets: [{
-      label: "Atributos",
+      label: "Puntaje: ",
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
