@@ -1,0 +1,56 @@
+<% include partials/header %>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Partida <%= partida.codigo;%></h1>
+  <p class="mb-4">Aquí se pueden observar los datos de esta partida.</p>
+
+  <!-- DataTales Example -->
+  <div class="card shadow mb-4">
+    <div class="card-header py-3">
+      <h6 class="m-0 font-weight-bold text-primary">Jugadores</h6>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Carrera</th>
+              <th>Carta</th>
+              <th>Ver</th>
+            </tr>
+          </thead>
+          <tfoot>
+            <tr>
+              <th>Nombre</th>
+              <th>Email</th>
+              <th>Carrera</th>
+              <th>Carta</th>
+              <th>Ver</th>
+            </tr>
+          </tfoot>
+          <tbody>
+            <% jugadores.forEach(function(jugador){%>
+            <tr>
+              <td><%= jugador.nombre; %></td>
+              <td><%= jugador.email; %></td>
+              <td><%= jugador.carrera; %></td>
+              <td><%= jugador.carta; %></td>
+              <td><a href="/jugadores/<%=jugador._id%>"">Ver</a></td>
+            </tr>
+            <%});%>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- /.container-fluid -->
+
+</div>
+<!-- End of Main Content -->
+<% include partials/footer %>
