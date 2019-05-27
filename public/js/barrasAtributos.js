@@ -29,8 +29,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Bar Chart Example
 var ctx = document.getElementById("barraAtributos");
-var jugador = document.getElementById("helper").getAttribute("data-name");
-console.log("se ejecuta");
+var jugador = document.getElementById("helper").innerText;
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -70,12 +69,12 @@ var myBarChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 15000,
+          max: 30,
           maxTicksLimit: 5,
           padding: 10,
           // Include a dollar sign in the ticks
           callback: function(value, index, values) {
-            return '$' + number_format(value);
+            return  number_format(value);
           }
         },
         gridLines: {
