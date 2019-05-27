@@ -29,7 +29,7 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Bar Chart Example
 var ctx = document.getElementById("barraAtributos");
-var jugador = document.getElementById("helper").innerText;
+var jugador = document.getElementById("jugador").innerText;
 console.log(jugador);
 var myBarChart = new Chart(ctx, {
   type: 'bar',
