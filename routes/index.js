@@ -31,7 +31,6 @@ router.get("/jugadores", function (req, res) {
 
 router.get("/partidas/:id", function (req, res) {
     Partida.findById(req.params.id).populate("jugadores").exec(function (err, partida) {
-        
         if (err) {
             console.log(err);
         } else {
