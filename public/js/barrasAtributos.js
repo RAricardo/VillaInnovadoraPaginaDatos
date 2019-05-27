@@ -29,8 +29,13 @@ function number_format(number, decimals, dec_point, thousands_sep) {
 
 // Bar Chart Example
 var ctx = document.getElementById("barraAtributos");
-var jugador = document.getElementById("jugador").innerText;
-console.log(jugador);
+
+var pensamiento = document.getElementById("pens").innerText;
+var orientacion = document.getElementById("orien").innerText;
+var amplitud = document.getElementById("ampl").innerText;
+var inteligencia = document.getElementById("intl").innerText;
+var innovacion = document.getElementById("innov").innerText;
+
 var myBarChart = new Chart(ctx, {
   type: 'bar',
   data: {
@@ -40,7 +45,7 @@ var myBarChart = new Chart(ctx, {
       backgroundColor: "#4e73df",
       hoverBackgroundColor: "#2e59d9",
       borderColor: "#4e73df",
-      data: [jugador.pensamiento, jugador.orientacion, jugador.amplitud, jugador.inteligencia, jugador.innovacion],
+      data: [pensamiento, orientacion, amplitud, inteligencia, innovacion],
     }],
   },
   options: {
